@@ -76,8 +76,8 @@ pipeline {
                     set -e
 
                     echo "=== Running Tests with Coverage ==="
-                    # CI=true mematikan watch mode (CRA/Jest maupun Vitest)
-                    CI=true npm test -- --coverage
+                    # Script "test" di package.json sudah memakai: vitest run --coverage
+                    CI=true npm test
 
                     echo "=== Tests Passed ==="
                 '''
